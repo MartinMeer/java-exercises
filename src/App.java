@@ -1,25 +1,27 @@
 
-/*Допишите публичный статический метод getWeekends(),
-который возвращает массив из двух элементов – названий выходных дней на английском.
-Метод принимает на вход параметр – формат возврата в виде строки. Всего есть два возможных значения:
-"long" (по умолчанию) – массив содержит строки "saturday" и "sunday"
-"short" – массив содержит строки "sat" и "sun"*/
-
-import java.util.Arrays;
+/*В классе App допишите публичный статический метод checkSecurity(), который проверяет безопасность соединения с переданным url.
+В качестве параметра метод принимает url - объект класса Url.
+Если протокол "https", то соединение считается безопасным, если "http", то нет.
+Метод должен вернуть строку вида "Connection to 'host_name' is secure",
+если соединение безопасно или "Connection to 'host_name' is not secure", если не безопасно.
+Вместо 'host_name' нужно подставить имя хоста.*/
 
 class App {
 
     public static void main(String[] args) {
-        String inputFormat = "long";
-        String[] weekend = getWeekends(inputFormat);
-        System.out.println(Arrays.toString(weekend));
+        Url typedUrl = new Url("https://google.com");
+        System.out.println(checkSecurity(typedUrl));
     }
 
-    public static String[] getWeekends(String str) {
-        if (str == "short") {
-            return new String[]{"sat", "sun"};
-        } else {
-            return new String[]{"Saturday", "Sunday"};
-        }
+    public static String checkSecurity(Url url) {
+        String protocol = url.getProtocol();
+        String hostName = url.getHost();
+            if (protocol.equals("https")) {
+                return "Connection to " + hostName + " is secure";
+            } else {
+                return "Connection to " + hostName + " is not secure";
+            }
+
     }
+
 }
