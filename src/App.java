@@ -6,20 +6,12 @@
 "short" – массив содержит строки "sat" и "sun"*/
 
 import java.util.Arrays;
+import org.apache.commons.lang3.StringUtils;
 
-class App {
+public class App {
 
     public static void main(String[] args) {
-        String inputFormat = "long";
-        String[] weekend = getWeekends(inputFormat);
-        System.out.println(Arrays.toString(weekend));
+        EvenOdd.playEvenOdd();
     }
 
-    public static String[] getWeekends(String str) {
-        if (str == "short") {
-            return new String[]{"sat", "sun"};
-        } else {
-            return new String[]{"Saturday", "Sunday"};
-        }
-    }
 }

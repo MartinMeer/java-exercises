@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/commons-lang3-3.14.0/commons-lang3-3.14.0.jar!/" />
@@ -20,6 +20,28 @@
       <library>
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/24.0.0/annotations-24.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/commons-lang3-3.14.0" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/commons-lang3-3.14.0" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Downloads/commons-lang3-3.14.0" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Downloads/commons-lang3-3.14.0" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/HexletProj/exer/commons-lang3-3.14.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
