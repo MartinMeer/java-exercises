@@ -26,8 +26,9 @@ public class EvenOdd {
             } else {
                 System.out.println("\'" + answer + "\' is wrong answer ;(. Correct answer was \'" + correctAnswer + "\'.\n" +
                         "Let's try again, NULL!");
+                counter = 4;
             }
-            System.exit(0);
+            //System.exit(0);
         }
     }
         private static String checkNumber(int number){
