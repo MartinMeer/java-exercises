@@ -19,17 +19,21 @@ public class EvenOdd {
             System.out.print("Question: " +
                     randomNumber +
                     "\nYour answer: ");
-            String answer = scanner.nextLine();
-            if (answer.equalsIgnoreCase(correctAnswer)) {
+            String userAnswer = scanner.nextLine();
+            if (userAnswer.equalsIgnoreCase(correctAnswer)) {
                 System.out.println("Correct!");
                 counter += 1;
             } else {
-                System.out.println("\'" + answer + "\' is wrong answer ;(. Correct answer was \'" + correctAnswer + "\'.\n" +
-                        "Let's try again, NULL!");
-                counter = 4;
+                System.out.println("\'" +
+                                    userAnswer +
+                                    "\' is wrong answer ;(. Correct answer was \'" +
+                                    correctAnswer +
+                                     "\'.\n" +
+                                     "Let's try again, NULL!");
+                break;
             }
-            //System.exit(0);
         }
+        System.out.println("Congratulations, NULL!");
     }
         private static String checkNumber(int number){
             if ((number % 2) == 0) {
